@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bread</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+
+
+</head>
+<body>
+
+<header>
+		<div class="left">
+			<ul>
+				<li><a href="index.html">Home </a></li>
+				<li><a href="popular.html">Popular Recipes</a></li>
+				<!-- <li><a href="#">New Recipe</li> -->
+			</ul>
+		</div>
+
+		<div class="right">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<div class="dropdown">
+			  		<button onclick="myFunction()" class="dropbtn">Categories</button>
+			  		<div id="myDropdown" class="dropdown-content">
+			    		<!--<a href="Curries.html">Curry</a> -->
+			   			<a href="Bread.html">Chapati</a>
+			   			<a href="breakfast.html">Breakfast</a>
+			 		 </div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div id="logo">
+			<img src="images/chefs-hat.png"/>
+			<p> MyRecipies</p>
+		 </div>
+</header>
+
+
+<div class="section-area">
+
+<div>
+<button  onclick="plusDivs(-1)">&#10094;</button>
+<button  onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<div style="max-width:1000px">
+	<div>
+  <img class="mySlides" src="images/food3.jpeg" style="width:100%">
+
+  <img class="mySlides" src="images/food2.jpeg" style="width:100%">
+
+  <img class="mySlides" src="images/food1.jpeg" style="width:100%">
+
+</div>
+
+</div>
+
+<div>
+  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+
+
+<footer>
+		<img src="images/cutlery.png" />
+
+		<nav>
+			<ul>
+				<li>About Us</li>
+				<li>Contact Us </li>
+				<li>Suggest a Recipe </li>
+			</ul>
+		</nav>
+
+	</footer>
+
+</body>
+<script>
+	/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+
+
+/*for slider*/
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+</html>

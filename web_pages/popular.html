@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Popular Recipe</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<header>
+		<div class="left">
+			<ul>
+				<li><a href="index.html">Home</a></li> 
+				<li><a href="popular.html">Popular Recipes</a></li>
+				<!-- <li><a href="#">New Recipe</li> -->
+			</ul>
+		</div>
+
+		<div class="right">
+			<ul>
+				<li class="dropdown">
+					<div class="dropdown">
+			  		<button onclick="myFunction()" class="dropbtn">Categories</button>
+			  		<div id="myDropdown" class="dropdown-content">
+			    		<!--<a href="Curries.html">Curry</a>  -->
+			   			<a href="Bread.html">Chapati</a>
+			   			<a href="breakfast.html">Breakfast</a>
+			 		 </div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div id="logo">
+			<img src="images/chefs-hat.png"/>
+			<p> MyRecipies</p>
+		 </div>
+	</header>
+
+
+ 	<div class="Content">
+			<table class="popular">
+				<tr>
+					<td>
+			 		 	<img class="slide1" src="images/food1.jpeg" style="width:100%"/>
+
+			 			<div id="flip10"> Click to View the Recipe of Dal Makhni </div>
+ 						<div id="panel11">Recipe of the Item </div>
+ 					</td>
+
+					<td>
+			  			<img class="slide2" src="images/food1.jpeg" style="width:100%"/>
+
+			  		 	<div id="flip20"> Click to View the Recipe of Rajma </div>
+ 			  			<div id="panel12">Recipe of the Item </div>
+					</td>
+					<td>
+						<img class="slide3" src="images/food2.jpeg" style="width:100%"/>
+
+			  			<div id="flip30"> Click to View the Recipe of Chole </div>
+ 			 		    <div id="panel13">Recipe of the Item </div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img class="slide4" src="images/food2.jpeg" style="width:100%"/>
+
+			  			<div id="flip40"> Click to View the Recipe of  Dal Tadka</div>
+ 			 		    <div id="panel14">Recipe of the Item </div>
+ 			 		</td>
+					<td><img class="slide5" src="images/food2.jpeg" style="width:100%"/>
+
+			  			<div id="flip50"> Click to View the Recipe of Dal Panchmeel </div>
+ 			 		    <div id="panel15">Recipe of the Item </div>
+ 			 		</td>
+ 			 		<td>
+						<img class="slide6" src="images/food2.jpeg" style="width:100%"/>
+
+			  			<div id="flip60"> Click to View the Recipe of Palak Dal </div>
+ 			 		    <div id="panel16">Recipe of the Item </div>
+ 			 		</td>
+
+				</tr>
+
+
+			</table>
+
+
+			 <!-- <button class="btn1">Slide Up</button>
+			  <button class="btn2">Slide Down</button> -->
+
+			</div>
+
+	<footer>
+		<img src="images/cutlery.png" />
+
+		<nav>
+			<ul>
+				<li>About Us</li>
+				<li>Contact Us </li>
+				<li>Suggest a Recipe </li>
+			</ul>
+		</nav>
+
+	</footer>
+</body>
+<script>
+
+$(document).ready(function(){
+    /*<$(".btn1").click(function(){
+        $(".slide1").slideUp();
+    });
+    $(".btn2").click(function(){
+        $(".slide1").slideDown();
+    }); */
+
+	 $("#flip10").click(function(){
+    	$("#panel11").slideToggle("slow");
+    });
+
+
+    $("#flip20").click(function(){
+    	$("#panel12").slideToggle("slow");
+    });
+
+      $("#flip30").click(function(){
+    	$("#panel13").slideToggle("slow");
+    });
+
+    $("#flip40").click(function(){
+    	$("#panel14").slideToggle("slow");
+    });
+
+
+    $("#flip50").click(function(){
+    	$("#panel15").slideToggle("slow");
+    });
+
+      $("#flip60").click(function(){
+    	$("#panel16").slideToggle("slow");
+    });
+
+});
+
+	/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+/* For slide show */
+
+
+</script>
+</html>
